@@ -4,14 +4,14 @@
 #
 Name     : R-lpSolve
 Version  : 5.6.13
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/lpSolve_5.6.13.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lpSolve_5.6.13.tar.gz
 Summary  : Interface to 'Lp_solve' v. 5.5 to Solve Linear/Integer Programs
 Group    : Development/Tools
 License  : LGPL-2.0
-Requires: R-lpSolve-lib
-BuildRequires : clr-R-helpers
+Requires: R-lpSolve-lib = %{version}-%{release}
+BuildRequires : buildreq-R
 
 %description
 solving linear, integer and mixed integer programs. In this
@@ -36,11 +36,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523314655
+export SOURCE_DATE_EPOCH=1552768378
 
 %install
+export SOURCE_DATE_EPOCH=1552768378
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1523314655
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -75,8 +75,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library lpSolve|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  lpSolve || :
 
 
 %files
@@ -100,7 +99,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/lpSolve/help/paths.rds
 /usr/lib64/R/library/lpSolve/html/00Index.html
 /usr/lib64/R/library/lpSolve/html/R.css
-/usr/lib64/R/library/lpSolve/libs/symbols.rds
 
 %files lib
 %defattr(-,root,root,-)
