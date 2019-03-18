@@ -4,7 +4,7 @@
 #
 Name     : R-lpSolve
 Version  : 5.6.13
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/lpSolve_5.6.13.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lpSolve_5.6.13.tar.gz
 Summary  : Interface to 'Lp_solve' v. 5.5 to Solve Linear/Integer Programs
@@ -36,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552768378
+export SOURCE_DATE_EPOCH=1552926989
 
 %install
-export SOURCE_DATE_EPOCH=1552768378
+export SOURCE_DATE_EPOCH=1552926989
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
