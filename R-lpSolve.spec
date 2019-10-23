@@ -4,7 +4,7 @@
 #
 Name     : R-lpSolve
 Version  : 5.6.13.3
-Release  : 24
+Release  : 25
 URL      : https://cran.r-project.org/src/contrib/lpSolve_5.6.13.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lpSolve_5.6.13.3.tar.gz
 Summary  : Interface to 'Lp_solve' v. 5.5 to Solve Linear/Integer Programs
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : LGPL-2.0
 Requires: R-lpSolve-lib = %{version}-%{release}
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 solving linear, integer and mixed integer programs. In this
@@ -36,10 +37,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566227452
+export SOURCE_DATE_EPOCH=1571857491
 
 %install
-export SOURCE_DATE_EPOCH=1566227452
+export SOURCE_DATE_EPOCH=1571857491
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
