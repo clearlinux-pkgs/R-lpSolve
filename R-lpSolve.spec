@@ -4,7 +4,7 @@
 #
 Name     : R-lpSolve
 Version  : 5.6.15
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/lpSolve_5.6.15.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lpSolve_5.6.15.tar.gz
 Summary  : Interface to 'Lp_solve' v. 5.5 to Solve Linear/Integer Programs
@@ -30,21 +30,22 @@ lib components for the R-lpSolve package.
 
 %prep
 %setup -q -c -n lpSolve
+cd %{_builddir}/lpSolve
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580142330
+export SOURCE_DATE_EPOCH=1589825819
 
 %install
-export SOURCE_DATE_EPOCH=1580142330
+export SOURCE_DATE_EPOCH=1589825819
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
