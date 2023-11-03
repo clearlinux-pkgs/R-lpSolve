@@ -5,7 +5,7 @@
 #
 Name     : R-lpSolve
 Version  : 5.6.19
-Release  : 55
+Release  : 56
 URL      : https://cran.r-project.org/src/contrib/lpSolve_5.6.19.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/lpSolve_5.6.19.tar.gz
 Summary  : Interface to 'Lp_solve' v. 5.5 to Solve Linear/Integer Programs
