@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : R-lpSolve
-Version  : 5.6.22
-Release  : 61
-URL      : https://ftp.osuosl.org/pub/cran/src/contrib/lpSolve_5.6.22.tar.gz
-Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/lpSolve_5.6.22.tar.gz
+Version  : 5.6.23
+Release  : 62
+URL      : https://ftp.osuosl.org/pub/cran/src/contrib/lpSolve_5.6.23.tar.gz
+Source0  : https://ftp.osuosl.org/pub/cran/src/contrib/lpSolve_5.6.23.tar.gz
 Summary  : Interface to 'Lp_solve' v. 5.5 to Solve Linear/Integer Programs
 Group    : Development/Tools
 License  : LGPL-2.0
@@ -48,10 +48,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1731644878
+export SOURCE_DATE_EPOCH=1735108680
 
 %install
-export SOURCE_DATE_EPOCH=1731644878
+export SOURCE_DATE_EPOCH=1735108680
 rm -rf %{buildroot}
 LANG=C.UTF-8
 CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
